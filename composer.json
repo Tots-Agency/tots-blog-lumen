@@ -1,0 +1,23 @@
+{
+    "name": "tots/blog-lumen",
+    "description": "The library for Lumen PHP",
+    "version": "0.0.1",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "laravel/lumen-framework": "^10.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Tots\\Blog\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Matias Camiletti",
+            "email": "matias.camiletti@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
