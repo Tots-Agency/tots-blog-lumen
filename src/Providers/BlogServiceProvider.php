@@ -1,6 +1,6 @@
 <?php
 
-namespace Tots\Account\Providers;
+namespace Tots\Blog\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -33,7 +33,7 @@ class BlogServiceProvider extends ServiceProvider
     }
 
     /**
-     * Boot the authentication services for the application.
+     * Boot the blog services for the application.
      *
      * @return void
      */
