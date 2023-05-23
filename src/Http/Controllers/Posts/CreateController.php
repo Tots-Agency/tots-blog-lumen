@@ -30,7 +30,7 @@ class CreateController extends \Laravel\Lumen\Routing\Controller
         $item->seo_description = $request->input('seo_description');
         $item->seo_keywords = $request->input('seo_keywords');
         $item->visibility = $request->input('visibility');
-        $item->creator_id = $request->input('creator_id');
+        $item->creator_id = $request->user()->id;
         // Save new model
         $item->save();
         // Return data
