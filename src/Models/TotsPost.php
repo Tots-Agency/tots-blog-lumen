@@ -3,6 +3,7 @@
 namespace Tots\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Tots\Auth\Models\TotsUser;
 
 /**
@@ -118,12 +119,18 @@ use Tots\Auth\Models\TotsUser;
  *  type="",
  *  description=""
  * )
-
+* @OA\Property(
+ *  property="deleted_at",
+ *  type="",
+ *  description=""
+ * )
  *
  * @author matiascamiletti
  */
 class TotsPost extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'tots_post';
     
     //protected $casts = ['data' => 'array'];
