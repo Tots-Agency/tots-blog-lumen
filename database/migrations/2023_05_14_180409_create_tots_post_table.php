@@ -24,11 +24,11 @@ return new class extends Migration
             $table->tinyInteger('is_featured')->nullable(false)->default(0);
             $table->tinyInteger('is_archived')->nullable(false)->default(0);
             $table->integer('language_id')->nullable(true);
-            $table->tinyInteger('status')->nullable(false)->default(0);
+            $table->tinyInteger('status')->nullable(false)->default(0)->comments('0 = Draft, 1 = Active');
             $table->text('seo_title')->nullable(true);
             $table->text('seo_description')->nullable(true);
             $table->text('seo_keywords')->nullable(true);
-            $table->tinyInteger('visibility')->nullable(false)->default(0);
+            $table->tinyInteger('visibility')->nullable(false)->default(0)->comment('0 = Public, 1 = Private');
             $table->unsignedBigInteger('creator_id');
             $table->timestamps();
             $table->softDeletes();

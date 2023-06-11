@@ -131,6 +131,12 @@ class TotsPost extends Model
 {
     use SoftDeletes;
 
+    const STATUS_DRAFT = 0;
+    const STATUS_ACTIVE = 1;
+
+    const VISIBILITY_PUBLIC = 0;
+    const VISIBILITY_PRIVATE = 1;
+
     protected $table = 'tots_post';
     
     //protected $casts = ['data' => 'array'];
